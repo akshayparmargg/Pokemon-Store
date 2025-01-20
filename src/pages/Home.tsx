@@ -1,5 +1,5 @@
 import React from "react";
-import PokemonList from "../components/PokemonList";
+import PokemonList from "../components/PokemonList/PokemonList";
 
 const Home: React.FC = () => {
   return (

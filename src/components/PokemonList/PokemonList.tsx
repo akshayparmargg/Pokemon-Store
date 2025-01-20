@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { getPokemonList, getPokemonDetails } from "../services/pokeAPI";
-import { Pokemon, PokemonDetails } from "../types/pokemon";
-import PokemonCard from "./PokemonCard";
+import { getPokemonList, getPokemonDetails } from "../../services/pokeAPI";
+import { Pokemon, PokemonDetails } from "../../types/pokemon";
+import PokemonCard from "../PokemonCard/PokemonCard";
 
 const PokemonList: React.FC = () => {
   const [pokemons, setPokemons] = useState<PokemonDetails[]>([]);

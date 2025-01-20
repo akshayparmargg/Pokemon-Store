@@ -4,13 +4,13 @@ export interface Pokemon {
 }
 
 export interface PokemonDetails {
-  id: number;
+  id?: number;
   name: string;
   sprites: {
     front_default: string;
   };
   types: {
-    slot: number;
+    slot?: number;
     type: {
       name: string;
     };
