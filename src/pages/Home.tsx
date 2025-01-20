@@ -5,7 +5,6 @@ import Logo from "../../src/assets/Logo.svg";
 const Home: React.FC = () => {
   return (
     <div className="home">
-      {/* Box component for layout and alignment */}
       <Box
         sx={{
           display: "flex",

@@ -9,13 +9,13 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
   return (
     <Card
       sx={{
-        backgroundColor: "#000", // Set background to black
-        border: "2px solid #ff0000", // Set red border
-        boxShadow: "0 0 10px 3px rgba(255, 0, 0, 0.5)", // Glowing red outline effect
+        backgroundColor: "#000",
+        border: "2px solid #ff0000",
+        boxShadow: "0 0 10px 3px rgba(255, 0, 0, 0.5)",
         "&:hover": {
-          boxShadow: "0 0 20px 5px rgba(255, 0, 0, 1)", // Glowing effect on hover
+          boxShadow: "0 0 20px 5px rgba(255, 0, 0, 1)",
         },
-        transition: "box-shadow 0.3s ease", // Smooth transition for the glowing effect
+        transition: "box-shadow 0.3s ease",
       }}
     >
       <CardMedia
