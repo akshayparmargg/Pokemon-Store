@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getPokemonList, getPokemonDetails } from "../../services/pokeAPI";
 import { Pokemon, PokemonDetails } from "../../types/pokemon";
+import { Grid, CircularProgress, Box } from "@mui/material";
 import PokemonCard from "../PokemonCard/PokemonCard";
 
 const PokemonList: React.FC = () => {
@@ -28,15 +29,28 @@ const PokemonList: React.FC = () => {
   }, []);
 
   return (
-    <div className="pokemon-list">
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: "32px",
+      }}
+    >
       {loading ? (
-        <p>Loading...</p>
+        <CircularProgress />
       ) : (
         pokemons.map((pokemon) => (
-          <PokemonCard key={pokemon.name} pokemon={pokemon} />
+          <Grid
+            item
+            key={pokemon.name}
+            sx={{ minWidth: 150, textAlign: "center" }}
+          >
+            <PokemonCard pokemon={pokemon} />
+          </Grid>
         ))
       )}
-    </div>
+    </Box>
   );
 };
 
